@@ -11,4 +11,9 @@ public class Cachorro extends Animal {
         System.out.println("Abanando o rabo");
     }
 
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
+    }
+
 }

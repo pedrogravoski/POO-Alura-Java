@@ -22,5 +22,8 @@ public class principal {
 
         System.out.println(produtoPerecivel);
 
+        var media = new calculaMediaLista();
+        System.out.println("A média de preço dos produtos é: " + media.calculaMedia(produtos));
+
     }
 }

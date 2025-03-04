@@ -1,5 +1,7 @@
 package exercicios.curso.produtos;
 
+import java.util.ArrayList;
+
 public class produto {
     private String nome;
     private double preco;
@@ -34,4 +36,6 @@ public class produto {
     public String toString(){
         return this.getNome() + " - R$" + this.getPreco();
     }
+
+
 }
