@@ -2,7 +2,7 @@ import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -14,11 +14,13 @@ public class PrincipalComListas {
         Movie filmePaulo = new Movie("Dogville", 2003);
         filmePaulo.avalia(10);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(meuFilme);
         lista.add(outroFilme);
         lista.add(lost);
         lista.add(filmePaulo);
+
+        Collections.sort(lista);
 
         for (Titulo item : lista){
             System.out.println(item);
@@ -29,7 +31,11 @@ public class PrincipalComListas {
 
         }
 
-//        lista.forEach(System.out::println);
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando por ano");
+        System.out.println(lista);
+
+
     }
 
 }
