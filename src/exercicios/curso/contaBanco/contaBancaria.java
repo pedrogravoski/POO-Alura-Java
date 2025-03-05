@@ -5,6 +5,11 @@ public class contaBancaria {
     private double saldo;
     public String titular;
 
+    public contaBancaria(int numeroDaConta, double saldo) {
+        this.numeroDaConta = numeroDaConta;
+        this.saldo = saldo;
+    }
+
     public void setNumeroDaConta(int numeroDaConta) {
         this.numeroDaConta = numeroDaConta;
     }
@@ -23,9 +28,10 @@ public class contaBancaria {
 
     public void exibir(){
         System.out.println("ID conta: " + this.getNumeroDaConta());
-        System.out.println("Titular: " + this.titular);
         System.out.println("Saldo: " + this.getSaldo());
     }
+
+
 }
 
 
