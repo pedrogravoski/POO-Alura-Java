@@ -1,5 +1,7 @@
 package exercicios.curso.criptoApi;
 
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -31,5 +33,7 @@ public class ConsultaCripto {
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response.body());
+
+
     }
 }
